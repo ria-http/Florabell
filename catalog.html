@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог — Florabelle</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+<body>
+    <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">Florabelle</a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" id="burger-btn">&#9776;</button>
+    </div>
+  </header>
+
+
+<main class="main">
+    <section class="catalog">
+        <div class="container">
+            <h1 class="catalog__title">Каталог букетов</h1>
+            <div class="cart-info" id="cart-info" style="display: none;">
+                В корзине: <span id="cart-count">0</span> товаров на <span id="cart-total">0</span> ₽
+                <button id="view-cart-btn">Просмотреть корзину</button>
+            </div>
+    <div class="catalog__grid">
+      <div class="product-card">
+        <img src="розы.jpeg" alt="Букет из роз">
+        <h3 class="product-card__title">Букет из роз 🌹</h3>
+        <p class="product-card__price">1200 ₽</p>
+        <button class="product-card__btn" data-product="Букет из роз">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="пионы.jpeg" alt="Букет из пионов">
+        <h3 class="product-card__title">Букет из пионов 🌸</h3>
+        <p class="product-card__price">1800 ₽</p>
+        <button class="product-card__btn" data-product="Букет из пионов">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="тюльпанчики.jpeg" alt="Букет из тюльпанов">
+        <h3 class="product-card__title">Букет из тюльпанов 🌷</h3>
+        <p class="product-card__price">1500 ₽</p>
+        <button class="product-card__btn" data-product="Букет из тюльпанов">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="гортенз.jpeg" alt="Букет из гортензий">
+        <h3 class="product-card__title">Букет из гортензий 💙</h3>
+        <p class="product-card__price">2000 ₽</p>
+        <button class="product-card__btn" data-product="Букет из гортензий">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="ранункулюсы.jpeg" alt="Букет из ранункулюсов">
+        <h3 class="product-card__title">Букет из ранункулюсов 🌟</h3>
+        <p class="product-card__price">2300 ₽</p>
+        <button class="product-card__btn" data-product="Букет из ранункулюсов">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="сирень.jpeg" alt="Букет сирени">
+        <h3 class="product-card__title">Букет сирени 💜</h3>
+        <p class="product-card__price">1700 ₽</p>
+        <button class="product-card__btn" data-product="Букет сирени">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="альстромерия.jpeg" alt="Букет из альстромерий">
+        <h3 class="product-card__title">Букет из альстромерий ✨</h3>
+        <p class="product-card__price">1400 ₽</p>
+        <button class="product-card__btn" data-product="Букет из альстромерий">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="гипс.jpeg" alt="Букет гипсофил">
+        <h3 class="product-card__title">Букет гипсофил 🌈</h3>
+        <p class="product-card__price">1950 ₽</p>
+        <button class="product-card__btn" data-product="Букет гипсофил">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="анемоны.jpeg" alt="Букет из анемонов">
+        <h3 class="product-card__title">Букет из анемонов 🖤</h3>
+        <p class="product-card__price">2100 ₽</p>
+        <button class="product-card__btn" data-product="Букет из анемонов">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="гвоздики.jpeg" alt="Букет из гвоздики">
+        <h3 class="product-card__title">Букет из гвоздики 🌸</h3>
+        <p class="product-card__price">1600 ₽</p>
+        <button class="product-card__btn" data-product="Букет из гвоздики">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="лилии.jpeg" alt="Букет лилий">
+        <h3 class="product-card__title">Букет лилий 🌺</h3>
+        <p class="product-card__price">2200 ₽</p>
+        <button class="product-card__btn" data-product="Букет из лилий">Купить 🛒</button>
+      </div>
+
+      <div class="product-card">
+        <img src="ромашки.jpeg" alt="Букет ромашек">
+        <h3 class="product-card__title">Букет ромашек🌼</h3>
+        <p class="product-card__price">1900 ₽</p>
+        <button class="product-card__btn" data-product="Букет ромашек">Купить 🛒</button>
+      </div>
+    </div>
+        </div>
+    </section>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; 2025 Florabelle</p>
+      <p>Сайт создан в образовательных целях! Вся информация вымышлена!</p>
+      <div class="footer__socials">
+        <a href="https://vk.com/riiaass">VK</a>
+        <a href="https://t.me/riaaa_da">Telegram</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Инициализация корзины
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartInfo = document.getElementById('cart-info');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
+        const viewCartBtn = document.getElementById('view-cart-btn');
+        
+        // Обновление отображения корзины
+        function updateCartDisplay() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartCount.textContent = totalItems;
+            cartTotal.textContent = totalPrice;
+            
+            if (totalItems > 0) {
+                cartInfo.style.display = 'block';
+            } else {
+                cartInfo.style.display = 'none';
+            }
+        }
+        
+        // Обработчик для кнопок "Купить"
+        document.querySelectorAll('.product-card__btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const productPrice = parseInt(this.parentElement.querySelector('.product-card__price').textContent);
+                
+                // Анимация добавления в корзину
+                this.textContent = 'Добавлено!';
+                this.style.backgroundColor = '#5ed17f';
+                
+                setTimeout(() => {
+                    this.textContent = 'Купить 🛒';
+                    this.style.backgroundColor = '';
+                }, 1000);
+                
+                // Добавление товара в корзину
+                const existingItem = cart.find(item => item.name === productName);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        name: productName,
+                        price: productPrice,
+                        quantity: 1
+                    });
+                }
+                
+                // Сохраняем корзину и обновляем отображение
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            });
+        });
+        
+        // Обработчик для кнопки просмотра корзины
+        viewCartBtn.addEventListener('click', function() {
+            alert('Содержимое корзины:\n' + 
+                cart.map(item => `${item.name} x${item.quantity} - ${item.price * item.quantity} ₽`).join('\n') +
+                `\n\nИтого: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)} ₽`);
+        });
+        
+        // Первоначальное обновление корзины
+        updateCartDisplay();
+        
+        // Добавим эффект при наведении на карточки товаров
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
