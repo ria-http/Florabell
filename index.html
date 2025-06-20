@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Florabelle — Цветы с душой</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">Florabelle</a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" id="burger-btn">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Цветы с душой</h1>
+        <p class="hero__subtitle">Быстрая доставка по Ростову</p>
+        <a href="catalog.html" class="hero__btn">Посмотреть каталог</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container features__grid">
+        <div class="features__item"><i class="fa-solid fa-seedling"></i></i> Свежее поступление каждый день</div>
+        <div class="features__item"><i class="fa-solid fa-truck"></i> Бесплатная доставка от 2000₽</div>
+        <div class="features__item"><i class="fa-regular fa-comment"></i> Консультации и помощь с выбором</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; 2025 Florabelle</p>
+      <p>Сайт создан в образовательных целях! Вся информация вымышлена!</p>
+      <div class="footer__socials">
+        <a href="https://vk.com/riiaass">VK</a>
+        <a href="https://t.me/riaaa_da">Telegram</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Анимация появления элементов при загрузке
+    const featuresItems = document.querySelectorAll('.features__item');
+    
+    featuresItems.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, 200 * index);
+    });
+    
+    // Добавляем эффект "пульсации" иконок при наведении
+    featuresItems.forEach(item => {
+      const icon = item.querySelector('.features__icon');
+      
+      item.addEventListener('mouseenter', () => {
+        icon.style.animation = 'pulse 1s infinite';
+      });
+      
+      item.addEventListener('mouseleave', () => {
+        icon.style.animation = '';
+      });
+    });
+  });
+      document.addEventListener('DOMContentLoaded', function() {
+        const burgerBtn = document.getElementById('burger-btn');
+        const headerNav = document.getElementById('header-nav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Открытие/закрытие бургер-меню
+        burgerBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            headerNav.querySelector('.header__menu').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+        
+        // Закрытие меню при клике на ссылку (для мобильной версии)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    burgerBtn.classList.remove('active');
+                    headerNav.querySelector('.header__menu').classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                }
+            });
+        });
+        
+        // Плавный скролл для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Изменение шапки при скролле
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.15)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = '#fff';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
