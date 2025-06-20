@@ -1,0 +1,477 @@
+/* Обнуление */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --pink: #fff0f5 ;
+  --main: #cf82bb;
+  --hover: #a86897;
+  --firststr: #fff1fb;
+
+}
+body {
+  font-family: "Cormorant Infant";
+  font-weight: bold;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+    /* Основные стили шапки */
+    .header {
+        background-color: #fff;
+        padding: 15px 0;
+        box-shadow: 0 1px 2px var(--main);
+    }
+    
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .header__logo {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--main);
+        text-decoration: none;
+    }
+    .header__logo:hover {
+      color: var(--hover);
+    }
+
+    
+    /* Стили меню */
+    .header__menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+    }
+    
+    .header__menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.8rem;
+        padding: 5px 0;
+        position: relative;
+        transition: color 0.3s;
+    }
+    
+    /* Эффект подчеркивания при наведении */
+    .header__menu li a:hover {
+        color: var(--hover);
+    }
+    
+    .header__menu li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--hover);
+        transition: width 0.3s;
+    }
+    
+    .header__menu li a:hover::after {
+        width: 100%;
+    }
+
+.header__nav {
+  display: flex;
+}
+
+.header__menu {
+  display: flex;
+  font-size: 1.5rem;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Бургер-меню */
+.header__burger {
+  display: none;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Главная - Hero */
+.hero {
+  background-image: url("https://rootscdn.ru/upload/images/banner/1749460642_0_2_2880_90_jpg.jpg");
+  background-size: cover;
+  padding: 6rem 0;
+  text-align: center;
+  color: white;
+}
+
+.hero__title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--main);
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero__btn {
+  display: inline-block;
+  background-color: var(--main);
+  font-size: 1.7rem;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero__btn:hover {
+  background-color: var(--hover);
+}
+
+
+/* Особенности */
+  .features {
+    padding: 60px 0;
+  }
+  
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .features__item {
+    background: var(--firststr);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+  }
+  
+  .features__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .features__text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+/* Каталог */
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.catalog__title {
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+.product-card {
+  background-color: #fff1fb;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.product-card__btn {
+  margin-top: 1rem;
+  background-color: var(--main);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Cormorant Infant";
+  transition: background 0.3s ease;
+}
+
+.product-card__btn:hover {
+  background-color: var(--hover)
+}
+
+
+/*корзина*/
+    .cart-info {
+        background: #f8f8f8;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.4rem;
+    }
+    
+    #view-cart-btn {
+        background: var(--main);
+        color: white;
+        font-size: 1.4rem;
+        font-family: "Cormorant Infant";
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    #view-cart-btn:hover {
+        background: var(--hover);
+    }
+    
+    .product-card {
+        transition: all 0.3s ease;
+    }
+    
+    .product-card__btn {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+
+/* Услуги */
+.services__list {
+  margin: 2rem 0;
+  list-style: disc inside;
+  line-height: 1.8;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.services__title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.service-card {
+  background: #fff0f5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.service-card__title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card__desc {
+  font-size: 1.1rem;
+  color: #555;
+}
+    /* Стили для карточек услуг */
+    .service-card {
+        position: relative;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+
+
+/* Форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem 0;
+}
+
+.form__fieldset {
+  border: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.form__legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form__label--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form__label {
+  font-size: 1.4rem;
+}
+
+.form__input,
+.form__textarea,
+.form__btn,
+select {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--hover);
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "Cormorant Infant";
+}
+
+
+.form button {
+  background-color: var(--main);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.form button:hover {
+  background-color: var(--hover)
+}
+
+.form__message {
+  margin-top: 1rem;
+  color: green;
+}
+
+
+.contacts__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 500px;
+}
+
+.contacts__title {
+  text-align: center;
+  margin-right: 23%;
+  font-size: 2rem;
+}
+
+.contacts__form,
+.contacts__map {
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+/* Подвал */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 30px ;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
+
+.footer__socials a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.footer__socials a:hover {
+  color: var(--hover);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+
+  .header__menu.active {
+    display: flex;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .features__grid {
+    flex-direction: column;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .contacts__content {
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    height: 300px;
+  }
+}
