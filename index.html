@@ -107,22 +107,15 @@
         const navLinks = document.querySelectorAll('.nav-link');
         
         // Открытие/закрытие бургер-меню
-        burgerBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            headerNav.querySelector('.header__menu').classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-        });
-        
-        // Закрытие меню при клике на ссылку (для мобильной версии)
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    burgerBtn.classList.remove('active');
-                    headerNav.querySelector('.header__menu').classList.remove('active');
-                    document.body.classList.remove('no-scroll');
-                }
-            });
-        });
+
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
+
+
         
         // Плавный скролл для якорных ссылок
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
