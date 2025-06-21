@@ -14,16 +14,33 @@
   <header class="header">
     <div class="container header__container">
       <a href="index.html" class="header__logo">Florabelle</a>
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="services.html">Услуги</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      
+<nav class="header__nav">
+  <button class="burger" aria-label="Открыть меню">
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+  </button>
+
+  <ul class="header__menu">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+
+  <!-- Мобильное меню (выпадает по клику) -->
+  <div class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</header>
 
   <main class="main">
     <section class="hero">
