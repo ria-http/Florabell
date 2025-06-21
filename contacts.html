@@ -31,42 +31,45 @@
 
   <div class="contacts__form">
     <h2 class="contacts__title"><i class="fas fa-envelope" style="color: var(--hover);"></i> Свяжитесь с нами</h2>
-    <form class="form" id="contact-form" action="https://kurmaevadara7@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false"> 
-        <label class="form__label">
-            <i class="fas fa-user" style="color: var(--hover);"></i> Ваше имя:
-            <input type="text" name="name" class="form__input" required>
-        </label>
+<form class="form" id="contact-form" action="https://formsubmit.co/kurmaevadara7@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Новое сообщение с сайта">
+  <input type="hidden" name="_template" value="table">
+  
+  <label class="form__label">
+    <i class="fas fa-user" style="color: var(--hover);"></i> Ваше имя:
+    <input type="text" name="Имя" class="form__input" required>
+  </label>
 
-        <label class="form__label">
-            <i class="fas fa-phone" style="color: var(--hover);"></i> Телефон:
-            <input type="tel" name="phone" class="form__input" required pattern="\+?[0-9\s\-]{7,}">
-        </label>
+  <label class="form__label">
+    <i class="fas fa-phone" style="color: var(--hover);"></i> Телефон:
+    <input type="tel" name="Телефон" class="form__input" required pattern="\+?[0-9\s\-]{7,}">
+  </label>
 
-        <label class="form__label">
-            <i class="fas fa-at" style="color: var(--hover);"></i> Email:
-            <input type="email" name="email" class="form__input" required>
-        </label>
+  <label class="form__label">
+    <i class="fas fa-at" style="color: var(--hover);"></i> Email:
+    <input type="email" name="Email" class="form__input" required>
+  </label>
 
-        <label class="form__label">
-            <i class="fas fa-comment-alt" style="color: var(--hover);"></i> Тема обращения:
-            <select name="subject" class="form__input" required>
-                <option value="">Выберите тему</option>
-                <option value="order">Вопрос о заказе</option>
-                <option value="cooperation">Сотрудничество</option>
-                <option value="other">Другое</option>
-            </select>
-        </label>
+  <label class="form__label">
+    <i class="fas fa-comment-alt" style="color: var(--hover);"></i> Тема обращения:
+    <select name="Тема" class="form__input" required>
+      <option value="">Выберите тему</option>
+      <option value="order">Вопрос о заказе</option>
+      <option value="cooperation">Сотрудничество</option>
+      <option value="other">Другое</option>
+    </select>
+  </label>
 
-        <label class="form__label">
-            <i class="fas fa-edit" style="color: var(--hover);"></i> Сообщение:
-            <textarea name="message" class="form__textarea" rows="5" required></textarea>
-        </label>
-        <button type="submit" class="form__btn">
-            <i class="fas fa-paper-plane"></i> Отправить
-        </button>
-      </input>
-    </form>
+  <label class="form__label">
+    <i class="fas fa-edit" style="color: var(--hover);"></i> Сообщение:
+    <textarea name="Сообщение" class="form__textarea" rows="5" required></textarea>
+  </label>
+  
+  <button type="submit" class="form__btn">
+    <i class="fas fa-paper-plane"></i> Отправить
+  </button>
+</form>
 </div>
 
   <div class="contacts__map">
