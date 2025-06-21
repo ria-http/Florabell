@@ -528,11 +528,11 @@ select {
   /* Убираем .header__menu.active из адаптива */
 
   .hero__title {
-    color: #0000;
+    color: #1d1c1c;
   }
 
   .hero__subtitle {
-    color: #0000;
+    color: #1d1c1c;
   }
 
   .features__grid {
