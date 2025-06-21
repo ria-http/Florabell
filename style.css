@@ -450,6 +450,26 @@ select {
   border-radius: 2px;
 }
 
+/* Кнопка-бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger__line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
 /* Мобильное меню */
 .mobile-menu {
   display: none;
@@ -494,10 +514,9 @@ select {
   }
 }
 
-
-/* Адаптивность */
+/* Мобильная версия */
 @media (max-width: 768px) {
-   .burger {
+  .burger {
     display: flex;
   }
 
@@ -505,22 +524,13 @@ select {
     display: none;
   }
 
-  .header__menu.active {
-    display: flex;
-  }
-
-  .header__menu.active {
-    display: flex;
-  }
-
-  .header__burger {
-    display: block;
-  }
+  /* НЕ показываем .header__menu на мобилках — используем только .mobile-menu */
+  /* Убираем .header__menu.active из адаптива */
 
   .hero__title {
-  color: var(--main);
+    color: var(--main);
   }
-  
+
   .features__grid {
     flex-direction: column;
   }
@@ -539,3 +549,4 @@ select {
     height: 300px;
   }
 }
+
